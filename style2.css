@@ -1,0 +1,66 @@
+/* 1. ZERAR AS MARGENS DO NAVEGADOR */
+/* Se você não fizer isso, sua faixa ficará com um espaço branco sobrando nas laterais */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* 2. CONFIGURAÇÕES DA FAIXA */
+.faixa-topo {
+    background-color: red; /* A cor da sua faixa */
+    color: black;              /* A cor do texto dentro da faixa */
+    width: 100%;               /* Garante que ocupe 100% da tela */
+    
+    /* Usando Flexbox para organizar o conteúdo (Logo na esquerda, Menu na direita) */
+    display: flex;
+    justify-content: space-between; /* Empurra os itens para as pontas */
+    align-items: center;            /* Centraliza os itens na vertical */
+    
+    /* Espaçamento interno (Cima/Baixo e Esquerda/Direita) */
+    padding: 15px 40px; 
+    
+    /* Um truque para não quebrar a largura quando colocamos padding */
+    box-sizing: border-box; 
+    
+    /* Opcional: Uma sombra leve embaixo da faixa para dar destaque */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+/* 3. CONFIGURAÇÕES DOS LINKS DO MENU (Opcional) */
+.menu a {
+    color: black;
+    text-decoration: none;
+    margin-left: 50px;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: #feffff; /* Muda a cor quando passa o mouse */
+}
+
+.Historia{
+    text-align: center;
+    
+}
+
+.historia_surgimento{
+    margin: 60px;
+
+}
+.texto-com-imagem {
+  /* 1. Escolha a fonte e o tamanho */
+  font-family: 'Impact', sans-serif;
+  font-size: 100px;
+
+  /* 2. Adicione a imagem de fundo */
+  background-image: url('caminho/para/sua-imagem.jpg');
+  background-size: cover; /* Faz a imagem cobrir todo o espaço */
+  background-position: center; /* Centraliza a imagem */
+
+  /* 3. Recorte a imagem no formato do texto */
+  background-clip: text;
+  -webkit-background-clip: text; /* Necessário para compatibilidade com Chrome/Safari */
+  
+  /* 4. Deixe a cor da letra transparente para o fundo aparecer */
+  color: transparent;
+}
