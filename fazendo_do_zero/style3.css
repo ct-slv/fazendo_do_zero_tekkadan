@@ -1,0 +1,76 @@
+/* 1. ZERAR AS MARGENS DO NAVEGADOR */
+/* Se você não fizer isso, sua faixa ficará com um espaço branco sobrando nas laterais */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* 2. CONFIGURAÇÕES DA FAIXA */
+.faixa-topo {
+    background-color: red; /* A cor da sua faixa */
+    color: black;              /* A cor do texto dentro da faixa */
+    width: 100%;               /* Garante que ocupe 100% da tela */
+    
+    /* Usando Flexbox para organizar o conteúdo (Logo na esquerda, Menu na direita) */
+    display: flex;
+    justify-content: space-between; /* Empurra os itens para as pontas */
+    align-items: center;            /* Centraliza os itens na vertical */
+    
+    /* Espaçamento interno (Cima/Baixo e Esquerda/Direita) */
+    padding: 15px 40px; 
+    
+    /* Um truque para não quebrar a largura quando colocamos padding */
+    box-sizing: border-box; 
+    
+    /* Opcional: Uma sombra leve embaixo da faixa para dar destaque */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+/* 3. CONFIGURAÇÕES DOS LINKS DO MENU (Opcional) */
+.menu a {
+    color: black;
+    text-decoration: none;
+    margin-left: 50px;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: #feffff; /* Muda a cor quando passa o mouse */
+}
+/* Container principal do banner */
+.banner-horizontal {
+  display: flex;
+  justify-content: center; /* Centraliza os itens no meio da tela */
+  gap: 20px; /* Espaçamento entre as imagens */
+  padding: 50px 20px;
+  background-color: #f9f9f9; /* Cor de fundo opcional */
+}
+
+/* Container de cada imagem individual */
+.cartao-imagem {
+  width: 250px;
+  height: 350px;
+  border-radius: 12px; /* Deixa as bordas arredondadas */
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra inicial suave */
+  
+  /* A propriedade transition cria o movimento suave */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Ajusta a imagem para caber perfeitamente no container */
+.cartao-imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Efeito ao passar o mouse (Hover) */
+.cartao-imagem:hover {
+  /* O translateY negativo move o elemento para cima */
+  transform: translateY(-20px); 
+  
+  /* Aumenta a sombra para dar a impressão de que está flutuando mais alto */
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
